@@ -16,6 +16,12 @@ class Database:
         return cls.db
 
     @classmethod
+    async def get_collection(cls, collection_name: str):
+        if cls.db is None:
+            await cls.connect()
+        return cls.db[collection_name]
+
+    @classmethod
     async def close(cls):
         """Close the MongoDB connection"""
         if cls.client is not None:
