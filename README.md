@@ -62,7 +62,7 @@ Edit the `.env` file with your own values.
 3. **Run with Docker (recommended)**
 
 ```bash
-docker-compose up -d
+docker-compose up
 ```
 
 This will start both the API and MongoDB containers.
