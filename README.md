@@ -112,6 +112,4 @@ This API is deployed on Render and can be accessed at:
 A Postman collection with all API endpoints and example requests is available online.
 
 Access the Postman workspace at:
-[Task Manager API Collection](https://www.postman.com/joint-operations-architect-96410091/my-workspace/collection/mb0c026/task-manager)
-
-You can also import the `Task Management API.postman_collection.json` file from the repository into Postman to test the API locally.
+[Task Manager API Collection](https://www.postman.com/joint-operations-architect-96410091/task-manager/collection/mb0c026/task-manager?action=share&creator=38049202)

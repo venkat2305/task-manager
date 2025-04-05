@@ -33,8 +33,6 @@ class TaskStatus(str, Enum):
 
 
 class Task:
-    """OOP-based Task model for database operations"""
-
     collection_name = "tasks"
 
     def __init__(self, title: str, user_id: PyObjectId, 
@@ -78,11 +76,12 @@ class Task:
             updated_at=data.get("updated_at")
         )
 
-# Pydantic models for request/response validation
+
 class TaskBase(BaseModel):
     title: str
     description: Optional[str] = None
     status: TaskStatus = TaskStatus.PENDING
+
 
 class TaskCreate(TaskBase):
     model_config = {
@@ -94,6 +93,7 @@ class TaskCreate(TaskBase):
             }
         }
     }
+
 
 class TaskUpdate(BaseModel):
     title: Optional[str] = None
@@ -109,6 +109,7 @@ class TaskUpdate(BaseModel):
             }
         }
     }
+
 
 class TaskInDB(TaskBase):
     id: str = Field(alias="_id")

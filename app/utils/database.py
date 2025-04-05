@@ -12,7 +12,6 @@ class Database:
         if cls.client is None:
             cls.client = AsyncIOMotorClient(settings.MONGODB_URL)
             cls.db = cls.client[settings.DATABASE_NAME]
-            print(f"Connected to MongoDB: {settings.DATABASE_NAME}")
         return cls.db
 
     @classmethod
@@ -28,4 +27,3 @@ class Database:
             cls.client.close()
             cls.client = None
             cls.db = None
-            print("MongoDB connection closed")
